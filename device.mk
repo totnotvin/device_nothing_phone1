@@ -198,6 +198,7 @@ PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.default \
     init.Spacewar.display.rc \
+    init.Spacewar.perf.rc \
     init.qti.media.rc \
     init.qti.media.sh \
     init.target.rc \
