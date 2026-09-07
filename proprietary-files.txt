@@ -731,13 +731,13 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so;MODULE_SUFFIX=_vendor
 
 # Data Firmware
-vendor/firmware/yupik_ipa_fws.b00
-vendor/firmware/yupik_ipa_fws.b01
-vendor/firmware/yupik_ipa_fws.b02
-vendor/firmware/yupik_ipa_fws.b03
-vendor/firmware/yupik_ipa_fws.b04
-vendor/firmware/yupik_ipa_fws.elf
-vendor/firmware/yupik_ipa_fws.mdt
+vendor/firmware/yupik_ipa_fws.b00:vendor/firmware/image/yupik_ipa_fws.b00
+vendor/firmware/yupik_ipa_fws.b01:vendor/firmware/image/yupik_ipa_fws.b01
+vendor/firmware/yupik_ipa_fws.b02:vendor/firmware/image/yupik_ipa_fws.b02
+vendor/firmware/yupik_ipa_fws.b03:vendor/firmware/image/yupik_ipa_fws.b03
+vendor/firmware/yupik_ipa_fws.b04:vendor/firmware/image/yupik_ipa_fws.b04
+vendor/firmware/yupik_ipa_fws.elf:vendor/firmware/image/yupik_ipa_fws.elf
+vendor/firmware/yupik_ipa_fws.mdt:vendor/firmware/image/yupik_ipa_fws.mdt
 vendor/firmware/qps615_fw.bin
 
 # Diag
