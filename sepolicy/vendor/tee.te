@@ -1,2 +1,5 @@
 allow tee fingerprint_vendor_data_file:dir rw_dir_perms;
 allow tee fingerprint_vendor_data_file:file create_file_perms;
+
+# ION
+allow tee ion_device:chr_file r_file_perms;

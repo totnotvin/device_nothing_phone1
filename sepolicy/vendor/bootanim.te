@@ -1,1 +1,4 @@
 allow bootanim vendor_display_prop:file { read getattr map open };
+
+# ION
+allow bootanim ion_device:chr_file rw_file_perms;
