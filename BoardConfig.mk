@@ -98,6 +98,15 @@ TARGET_KERNEL_SOURCE := kernel/nothing/sm7325
 TARGET_KERNEL_CLANG_VERSION := r563880c
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/debugfs.config vendor/spacewar.config
 TARGET_KERNEL_NO_GCC := true
+# This kernel predates scripts/Makefile.clang (added upstream in 5.10):
+# its top-level Makefile only derives --target=/--prefix=/--gcc-toolchain=
+# clang flags inside `ifneq ($(CROSS_COMPILE),)` (see arch/arm64/Makefile's
+# caller, top-level Makefile ~line 572). kernel.mk's KERNEL_CLANG_TRIPLE
+# default alone is a no-op here without a matching KERNEL_CROSS_COMPILE -
+# without it clang compiles kernel sources under its host (x86_64) default
+# target, which is why AArch64 register names (x0/x1/x2) in
+# arch/arm64/include/asm/atomic_lse.h were rejected as unknown.
+KERNEL_CROSS_COMPILE := CROSS_COMPILE=aarch64-linux-gnu-
 
 
 # OTA
